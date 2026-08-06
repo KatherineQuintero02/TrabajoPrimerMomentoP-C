@@ -1,35 +1,179 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* ========================= */
+/* GOOGLE FONTS */
+/* ========================= */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap');
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+/* ========================= */
+/* VARIABLES */
+/* ========================= */
+
+:root{
+
+    --background:#0A0F1E;
+    --background-secondary:#141C2F;
+
+    --card:#1E293B;
+
+    --primary:#3B82F6;
+    --secondary:#7C3AED;
+
+    --gold:#D4AF37;
+    --silver:#C7CEDB;
+
+    --text:#F8FAFC;
+    --text-secondary:#94A3B8;
+
+    --radius:18px;
+
+    --transition:.30s;
+
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  place-items: center;
+html{
+    scroll-behavior:smooth;
 }
 
-#root {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body{
+
+    background:
+    linear-gradient(
+        180deg,
+        #070B16,
+        #0B1120,
+        #111827
+    );
+
+    color:var(--text);
+
+    font-family:'Rajdhani',sans-serif;
+
+    min-height:100vh;
+
+}
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+
+}
+
+button{
+
+    font-family:'Rajdhani',sans-serif;
+    cursor:pointer;
+
+    transition:all .3s;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+/* ========================= */
+/* TITULOS */
+/* ========================= */
+
+h1,h2,h3,.logo-text{
+
+    font-family:'Oxanium',cursive;
+
+}
+
+/* ========================= */
+/* EFECTO GLASS */
+/* ========================= */
+
+.glass{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+}
+
+/* ========================= */
+/* BOTON PRINCIPAL */
+/* ========================= */
+
+.btn-primary{
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:white;
+
+    border:none;
+
+    padding:14px 26px;
+
+    border-radius:14px;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 0 25px rgba(59,130,246,.4);
+
+}
+
+/* ========================= */
+/* TITULO */
+/* ========================= */
+
+.section-title{
+
+    font-size:2.5rem;
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+}
+
+.section-description{
+
+    text-align:center;
+
+    color:var(--text-secondary);
+
+    font-size:1.1rem;
+
+    margin-bottom:50px;
+
 }

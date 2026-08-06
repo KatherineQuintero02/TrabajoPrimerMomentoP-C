@@ -1,0 +1,51 @@
+.background-slider{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:-2;
+
+}
+
+.background-image{
+
+    position:absolute;
+
+    inset:0;
+
+    background-size:cover;
+
+    background-position:center;
+
+    opacity:0;
+
+    transition:opacity 2.5s ease;
+
+    filter:grayscale(100%) brightness(40%);
+
+}
+
+.background-image.active{
+
+    opacity:1;
+
+}
+
+.background-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(8,8,10,.88),
+
+        rgba(10,10,15,.92)
+
+    );
+
+}
