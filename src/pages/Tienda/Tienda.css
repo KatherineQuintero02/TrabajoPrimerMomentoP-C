@@ -1,0 +1,161 @@
+.tienda-page{
+
+    padding:140px 8% 80px;
+
+}
+
+.wallet-card{
+
+    max-width:450px;
+
+    margin:auto;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    margin-bottom:70px;
+
+}
+
+.wallet-card h2{
+
+    color:#FFD700;
+
+    margin-bottom:20px;
+
+}
+
+.wallet-card span{
+
+    display:block;
+
+    font-size:4rem;
+
+    color:white;
+
+    font-family:'Oxanium',sans-serif;
+
+    margin-bottom:15px;
+
+}
+
+.wallet-card p{
+
+    color:#d4d4d4;
+
+}
+
+.categoria{
+
+    margin-bottom:70px;
+
+}
+
+.categoria h2{
+
+    color:white;
+
+    margin-bottom:30px;
+
+    font-size:2rem;
+
+}
+
+.items-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.item-card{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.item-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#D4AF37;
+
+    box-shadow:0 0 25px rgba(212,175,55,.25);
+
+}
+
+.item-icon{
+
+    font-size:4rem;
+
+    margin-bottom:20px;
+
+}
+
+.item-card h3{
+
+    color:white;
+
+    margin-bottom:10px;
+
+}
+
+.item-card p{
+
+    color:#FFD700;
+
+    margin-bottom:20px;
+
+}
+
+.item-card button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    background:#D4AF37;
+
+    color:black;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.item-card button:hover{
+
+    transform:scale(1.05);
+
+}

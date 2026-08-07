@@ -4,11 +4,24 @@ import "./CardGame.css";
 
 function CardGame({ juego }) {
 
-    const { agregarFavorito } = useContext(FavoritosContexto);
+    const {
 
-    const handleFavorito = () => {
+        agregarFavorito,
+        eliminarFavorito,
+        favoritos,
+        ganarCreditos
 
-        agregarFavorito(juego);
+    } = useContext(FavoritosContexto);
+
+    const esFavorito = favoritos.some(item => item.id === juego.id);
+
+    const jugar = () => {
+
+        if (!juego.disponible) return;
+
+        ganarCreditos(100);
+
+        alert("🎉 ¡Ganaste 100 VerseCoins!");
 
     };
 
@@ -33,22 +46,47 @@ function CardGame({ juego }) {
             <div className="game-actions">
 
                 <button
-                    className="play-btn"
+                    onClick={jugar}
                     disabled={!juego.disponible}
                 >
 
-                    {juego.disponible ? "🎮 Jugar" : "🚧 Próximamente"}
+                    {
+
+                        juego.disponible
+                            ? "🎮 Jugar"
+                            : "Próximamente"
+
+                    }
 
                 </button>
 
-                <button
-                    className="favorite-btn"
-                    onClick={handleFavorito}
-                >
+                {
 
-                    👑 Hall of Fame
+                    esFavorito ? (
 
-                </button>
+                        <button
+                            className="btn-favorito"
+                            onClick={() => eliminarFavorito(juego.id)}
+                        >
+
+                            💔 Quitar favorito
+
+                        </button>
+
+                    ) : (
+
+                        <button
+                            className="btn-favorito"
+                            onClick={() => agregarFavorito(juego)}
+                        >
+
+                            ❤️ Agregar favorito
+
+                        </button>
+
+                    )
+
+                }
 
             </div>
 

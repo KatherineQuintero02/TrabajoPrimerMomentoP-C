@@ -1,4 +1,5 @@
 export const juegos = [
+
   {
     id: 1,
     nombre: "Ruleta Musical",
@@ -6,6 +7,7 @@ export const juegos = [
     icono: "🎡",
     disponible: true,
   },
+
   {
     id: 2,
     nombre: "Trivia",
@@ -13,6 +15,7 @@ export const juegos = [
     icono: "❓",
     disponible: true,
   },
+
   {
     id: 3,
     nombre: "Lanza los Dados",
@@ -20,11 +23,13 @@ export const juegos = [
     icono: "🎲",
     disponible: true,
   },
+
   {
     id: 4,
     nombre: "Adivina la Canción",
     descripcion: "Descubre la canción con una pista.",
     icono: "🎤",
     disponible: false,
-  },
+  }
+
 ];

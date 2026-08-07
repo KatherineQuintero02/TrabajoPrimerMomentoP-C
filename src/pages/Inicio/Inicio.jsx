@@ -7,8 +7,6 @@ function Inicio() {
 
         <>
 
-            <BackgroundSlider />
-
             <Hero />
 
         </>

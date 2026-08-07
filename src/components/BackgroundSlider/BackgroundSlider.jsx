@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
-import img1 from "../../assets/backgrounds/maluma1.jpg";
-import img2 from "../../assets/backgrounds/maluma2.jpg";
-import img3 from "../../assets/backgrounds/maluma3.jpg";
-import img4 from "../../assets/backgrounds/maluma4.jpg";
-import img5 from "../../assets/backgrounds/maluma5.jpg";
-import img6 from "../../assets/backgrounds/maluma6.jpg";
-import img7 from "../../assets/backgrounds/maluma7.jpg";
-import img8 from "../../assets/backgrounds/maluma8.jpg";
+import img1 from "../../assets/backgrounds/maluma1.jpeg";
+import img2 from "../../assets/backgrounds/maluma2.jpeg";
+import img3 from "../../assets/backgrounds/maluma3.jpeg";
+import img4 from "../../assets/backgrounds/maluma4.jpeg";
+import img5 from "../../assets/backgrounds/maluma5.jpeg";
+import img6 from "../../assets/backgrounds/maluma6.jpeg";
+import img7 from "../../assets/backgrounds/maluma7.jpeg";
+import img8 from "../../assets/backgrounds/maluma8.jpeg";
 
 import "./BackgroundSlider.css";
 
@@ -17,6 +17,9 @@ const imagenes = [
   img3,
   img4,
   img5,
+  img6,
+  img7,
+  img8
 ];
 
 function BackgroundSlider() {

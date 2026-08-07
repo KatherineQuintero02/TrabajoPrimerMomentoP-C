@@ -1,0 +1,187 @@
+.card-game{
+
+    width:320px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.card-game:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#D4AF37;
+
+    box-shadow:
+        0 0 25px rgba(212,175,55,.35),
+        0 10px 40px rgba(0,0,0,.35);
+
+}
+
+.game-icon{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#6d28d9,#8b5cf6);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:2rem;
+
+    box-shadow:0 0 25px rgba(109,40,217,.45);
+
+}
+
+.game-info{
+
+    text-align:center;
+
+}
+
+.game-info h2{
+
+    color:white;
+
+    font-family:'Oxanium',sans-serif;
+
+    margin-bottom:12px;
+
+    font-size:1.5rem;
+
+}
+
+.game-info p{
+
+    color:#cfcfcf;
+
+    line-height:1.6;
+
+    font-size:.95rem;
+
+}
+
+.game-actions{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.play-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#6d28d9,#8b5cf6);
+
+    color:white;
+
+    font-family:'Rajdhani',sans-serif;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.play-btn:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:0 0 18px rgba(109,40,217,.55);
+
+}
+
+.play-btn:disabled{
+
+    background:#555;
+
+    cursor:not-allowed;
+
+    box-shadow:none;
+
+}
+
+.favorite-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#D4AF37,#FFD700);
+
+    color:#111;
+
+    font-family:'Rajdhani',sans-serif;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.favorite-btn:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:0 0 20px rgba(212,175,55,.6);
+
+}
+
+@media(max-width:768px){
+
+    .card-game{
+
+        width:100%;
+
+    }
+
+}

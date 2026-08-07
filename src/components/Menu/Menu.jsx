@@ -15,53 +15,24 @@ function Menu({ abierto, cerrarMenu }) {
                 >
                     ✕
                 </button>
-                <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                        isActive ? "active-link" : ""
-                    }
-                    onClick={cerrarMenu}
-                >
+
+                <NavLink to="/" onClick={cerrarMenu}>
                     🏠 Portal
                 </NavLink>
 
-                <NavLink
-                    to="/juegos"
-                    className={({ isActive }) =>
-                        isActive ? "active-link" : ""
-                    }
-                    onClick={cerrarMenu}
-                >
+                <NavLink to="/juegos" onClick={cerrarMenu}>
                     🎮 Arcade
                 </NavLink>
 
-                <NavLink
-                    to="/tienda"
-                    className={({ isActive }) =>
-                        isActive ? "active-link" : ""
-                    }
-                    onClick={cerrarMenu}
-                >
+                <NavLink to="/tienda" onClick={cerrarMenu}>
                     🪙 Rewards
                 </NavLink>
 
-                <NavLink
-                    to="/favoritos"
-                    className={({ isActive }) =>
-                        isActive ? "active-link" : ""
-                    }
-                    onClick={cerrarMenu}
-                >
+                <NavLink to="/favoritos" onClick={cerrarMenu}>
                     👑 Hall of Fame
                 </NavLink>
 
-                <NavLink
-                    to="/perfil"
-                    className={({ isActive }) =>
-                        isActive ? "active-link" : ""
-                    }
-                    onClick={cerrarMenu}
-                >
+                <NavLink to="/perfil" onClick={cerrarMenu}>
                     👤 MyVerse
                 </NavLink>
 

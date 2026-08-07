@@ -1,28 +1,46 @@
-children: [
+import { createBrowserRouter } from "react-router-dom";
 
-    {
-        index: true,
-        element: <Inicio />
-    },
+import MainLayout from "../layouts/MainLayout";
 
-    {
-        path: "juegos",
-        element: <Juegos />
-    },
+import Inicio from "../pages/Inicio/Inicio";
+import Juegos from "../pages/Juegos/Juegos";
+import Tienda from "../pages/Tienda/Tienda";
+import Favoritos from "../pages/Favoritos/Favoritos";
+import Perfil from "../pages/Perfil/Perfil";
 
+const router = createBrowserRouter([
     {
-        path: "tienda",
-        element: <Tienda />
-    },
+        path: "/",
+        element: <MainLayout />,
+        children: [
 
-    {
-        path: "favoritos",
-        element: <Favoritos />
-    },
+            {
+                index: true,
+                element: <Inicio />
+            },
 
-    {
-        path: "perfil",
-        element: <Perfil />
+            {
+                path: "juegos",
+                element: <Juegos />
+            },
+
+            {
+                path: "tienda",
+                element: <Tienda />
+            },
+
+            {
+                path: "favoritos",
+                element: <Favoritos />
+            },
+
+            {
+                path: "perfil",
+                element: <Perfil />
+            }
+
+        ]
     }
+]);
 
-]
+export default router;

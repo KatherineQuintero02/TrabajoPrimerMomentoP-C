@@ -159,3 +159,35 @@
     }
 
 }
+
+.credits-box{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:110px;
+
+    padding:12px 20px;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    color:#D4AF37;
+
+    font-family:'Rajdhani',sans-serif;
+
+    font-size:1.1rem;
+
+    font-weight:bold;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    box-shadow:0 0 20px rgba(212,175,55,.15);
+
+}

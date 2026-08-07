@@ -8,41 +8,26 @@ function MainLayout() {
 
     const [menuAbierto, setMenuAbierto] = useState(false);
 
-    const abrirMenu = () => {
-
-        setMenuAbierto(true);
-
-    };
-
-    const cerrarMenu = () => {
-
-        setMenuAbierto(false);
-
+    const toggleMenu = () => {
+        setMenuAbierto((prev) => !prev);
     };
 
     return (
-
         <>
-
-            <Header abrirMenu={abrirMenu} />
+            <Header toggleMenu={toggleMenu} />
 
             <Menu
                 abierto={menuAbierto}
-                cerrarMenu={cerrarMenu}
+                toggleMenu={toggleMenu}
             />
 
             <main>
-
                 <Outlet />
-
             </main>
 
             <Footer />
-
         </>
-
     );
-
 }
 
 export default MainLayout;

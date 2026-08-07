@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { FavoritosContexto } from "../../context/FavoritosContexto";
+import "./Favoritos.css";
 
 function Favoritos() {
 
@@ -7,33 +8,74 @@ function Favoritos() {
 
     return (
 
-        <div>
+        <section className="favoritos-page">
 
-            <h1>❤️ Mis Favoritos</h1>
+            <div className="favoritos-header">
+
+                <h1>👑 Hall of Fame</h1>
+
+                <p>
+
+                    Aquí viven los juegos que hacen parte de tu colección premium.
+
+                </p>
+
+            </div>
 
             {
+
                 favoritos.length === 0 ? (
 
-                    <p>No has agregado ningún juego todavía.</p>
+                    <div className="favoritos-vacio">
+
+                        <span>👑</span>
+
+                        <h2>Aún no tienes favoritos</h2>
+
+                        <p>
+
+                            Explora el Arcade y agrega tus juegos favoritos.
+
+                        </p>
+
+                    </div>
 
                 ) : (
 
-                    favoritos.map((juego) => (
+                    <div className="favoritos-grid">
 
-                        <div key={juego.id}>
+                        {
 
-                            <h2>{juego.icono} {juego.nombre}</h2>
+                            favoritos.map((juego) => (
 
-                            <p>{juego.descripcion}</p>
+                                <div
+                                    key={juego.id}
+                                    className="favorito-card"
+                                >
 
-                        </div>
+                                    <div className="favorito-icon">
 
-                    ))
+                                        {juego.icono}
+
+                                    </div>
+
+                                    <h2>{juego.nombre}</h2>
+
+                                    <p>{juego.descripcion}</p>
+
+                                </div>
+
+                            ))
+
+                        }
+
+                    </div>
 
                 )
+
             }
 
-        </div>
+        </section>
 
     );
 
