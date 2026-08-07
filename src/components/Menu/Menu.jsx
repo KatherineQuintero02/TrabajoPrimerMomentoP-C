@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./Menu.css";
 
-function Menu({ abierto, cerrarMenu }) {
+function Menu({ abierto, toggleMenu }) {
 
     return (
 
@@ -11,28 +11,28 @@ function Menu({ abierto, cerrarMenu }) {
 
                 <button
                     className="cerrar-menu"
-                    onClick={cerrarMenu}
+                    onClick={toggleMenu}
                 >
                     ✕
                 </button>
 
-                <NavLink to="/" onClick={cerrarMenu}>
+                <NavLink to="/" onClick={toggleMenu}>
                     🏠 Portal
                 </NavLink>
 
-                <NavLink to="/juegos" onClick={cerrarMenu}>
+                <NavLink to="/juegos" onClick={toggleMenu}>
                     🎮 Arcade
                 </NavLink>
 
-                <NavLink to="/tienda" onClick={cerrarMenu}>
+                <NavLink to="/tienda" onClick={toggleMenu}>
                     🪙 Rewards
                 </NavLink>
 
-                <NavLink to="/favoritos" onClick={cerrarMenu}>
+                <NavLink to="/favoritos" onClick={toggleMenu}>
                     👑 Hall of Fame
                 </NavLink>
 
-                <NavLink to="/perfil" onClick={cerrarMenu}>
+                <NavLink to="/perfil" onClick={toggleMenu}>
                     👤 MyVerse
                 </NavLink>
 

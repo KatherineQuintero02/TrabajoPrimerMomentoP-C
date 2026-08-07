@@ -2,8 +2,7 @@ import { useContext } from "react";
 import { FavoritosContexto } from "../../context/FavoritosContexto";
 import "./Header.css";
 
-function Header({ abrirMenu }) {
-
+function Header({ toggleMenu }) {
     const { creditos } = useContext(FavoritosContexto);
 
     return (
@@ -26,7 +25,7 @@ function Header({ abrirMenu }) {
 
                 <button
                     className="menu-btn"
-                    onClick={abrirMenu}
+                    onClick={toggleMenu}
                 >
                     ☰
                 </button>
