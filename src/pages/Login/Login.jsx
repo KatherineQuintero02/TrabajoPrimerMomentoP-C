@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
@@ -6,28 +7,58 @@ function Login() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [mensaje, setMensaje] = useState("");
 
     const { login } = useAuth();
     const navigate = useNavigate();
 
-    const manejarLogin = (e) => {
+    const manejarLogin = async (e) => {
 
         e.preventDefault();
 
         if (!email || !password) {
-            alert("Por favor completa todos los campos.");
+            setMensaje("Por favor completa todos los campos.");
             return;
         }
 
-        login({
-            nombre: email.split("@")[0],
-            email: email
-        });
+        try {
 
-        navigate("/");
+            const respuesta = await axios.post(
+                "http://localhost:3000/api/usuarios",
+                {
+                    nombre: email.split("@")[0],
+                    email,
+                    password
+                }
+            );
+
+            console.log("Usuario registrado:", respuesta.data);
+
+            login({
+                nombre: email.split("@")[0],
+                email: email
+            });
+
+            navigate("/");
+
+        } catch (error) {
+
+            console.error("Error con el backend:", error);
+
+            if (error.response?.data?.mensaje) {
+                setMensaje(error.response.data.mensaje);
+            } else {
+                setMensaje(
+                    "No fue posible conectar con el servidor."
+                );
+            }
+
+        }
+
     };
 
     return (
+
         <div
             style={{
                 minHeight: "100vh",
@@ -113,9 +144,21 @@ function Login() {
 
                 </form>
 
+                {mensaje && (
+                    <p
+                        style={{
+                            marginTop: "20px",
+                            textAlign: "center"
+                        }}
+                    >
+                        {mensaje}
+                    </p>
+                )}
+
             </div>
 
         </div>
+
     );
 }
 

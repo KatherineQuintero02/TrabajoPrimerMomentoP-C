@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { FavoritosContexto } from "../../context/FavoritosContexto";
 import { useAuth } from "../../context/AuthContext";
 import "./Header.css";
@@ -6,11 +7,12 @@ import "./Header.css";
 function Header({ toggleMenu }) {
 
     const { creditos } = useContext(FavoritosContexto);
-
     const { usuario, logout } = useAuth();
+    const navigate = useNavigate();
 
     const manejarCerrarSesion = () => {
         logout();
+        navigate("/login");
     };
 
     return (
